@@ -7,10 +7,3 @@
 - template:
     src: "redshift.conf.j2"
     dest: "{{ redshift.conf_path }}"
-
-- service:
-    name: "redshift"
-    enabled: yes
-    state: started
-  become: yes
-  become_method: sudo
