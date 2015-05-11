@@ -1,0 +1,8 @@
+---
+redshift:
+  dependencies:
+    - redshift
+    - redshift-gtk
+  conf_path: "{{ ansible_user_dir }}/.config/redshift.conf"
+  latitude: "-22"
+  longitude: "-45"

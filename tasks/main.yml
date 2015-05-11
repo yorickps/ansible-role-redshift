@@ -1,0 +1,16 @@
+---
+- action: "{{ ansible_pkg_mgr }} name={{ item }} state=present"
+  become: yes
+  become_method: sudo
+  with_items: "{{ redshift.dependencies }}"
+
+- template:
+    src: "redshift.conf.j2"
+    dest: "{{ redshift.conf_path }}"
+
+- service:
+    name: "redshift"
+    enabled: yes
+    state: started
+  become: yes
+  become_method: sudo
