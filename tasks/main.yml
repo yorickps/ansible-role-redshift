@@ -1,9 +1,16 @@
 ---
-- action: "{{ ansible_pkg_mgr }} name={{ item }} state=present"
+- name: install redshift and dependencies
+  package:
+    name: "{{ item }}"
+    state: present
   become: yes
-  become_method: sudo
+  become_method: su
+  become_user: root
   with_items: "{{ redshift.dependencies }}"
 
-- template:
+- name: install redshift template
+  template:
     src: "redshift.conf.j2"
     dest: "{{ redshift.conf_path }}"
+    owner: "{{ ansible_user }}"
+    mode: 0640

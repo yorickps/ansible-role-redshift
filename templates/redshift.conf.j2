@@ -1,8 +1,16 @@
+;#
+;# {{ ansible_managed }}
+;#
 ; Global settings for redshift
 [redshift]
 ; Set the day and night screen temperatures
-temp-day=5700
-temp-night=3500
+{% if redshift.temp is defined %}
+temp-day={{ redshift.temp.day }}
+temp-night={{ redshift.temp.night }}
+{% else %}
+temp-day=5900
+temp-night=3700
+{% endif %}
 
 ; Enable/Disable a smooth transition between day and night
 ; 0 will cause a direct change from day to night screen temperature.
@@ -17,7 +25,11 @@ transition=1
 ;brightness-night=0.4
 ; Set the screen gamma (for all colors, or each color channel
 ; individually)
+{% if redshift.temp is defined %}
+gamma={{ redshift.gamma }}
+{% else %}
 gamma=0.8
+{% endif %}
 ;gamma=0.8:0.7:0.8
 ; This can also be set individually for day and night since
 ; version 1.10.
@@ -27,7 +39,11 @@ gamma=0.8
 ; Set the location-provider: 'geoclue', 'geoclue2', 'manual'
 ; type 'redshift -l list' to see possible values.
 ; The location provider settings are in a different section.
+{% if redshift.location_providertemp is defined %}
+location-provider={{ redshift.location_provider }}
+{% else %}
 location-provider=manual
+{% endif %}
 
 ; Set the adjustment-method: 'randr', 'vidmode'
 ; type 'redshift -m list' to see all possible values.
@@ -42,8 +58,10 @@ adjustment-method=randr
 ; Keep in mind that longitudes west of Greenwich (e.g. the Americas)
 ; are negative numbers.
 [manual]
-lat={{ redshift.latitude }}
-lon={{ redshift.longitude }}
+{% if redshift.location is defined %}
+lat={{ redshift.location.latitude }}
+lon={{ redshift.location.longitude }}
+{% endif %}
 
 ; Configuration of the adjustment-method
 ; type 'redshift -m METHOD:help' to see the settings.

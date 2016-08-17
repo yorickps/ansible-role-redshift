@@ -24,8 +24,9 @@ Example Playbook
       roles:
         - role: redshift
           redshift:
-            latitude: "-22"
-            longitude: "-45"
+            location:
+              latitude: "40"
+              longitude: "5"
 
 
 Requirements
