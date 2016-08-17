@@ -4,7 +4,7 @@ redshift:
     - redshift
   gui:
     - redshift-gtk
-  conf_path: "{{ ansible_user_dir }}/.config/redshift.conf"
+  conf_path: "{{ ansible_user_dir }}/.config"
   location:
     latitude: "40"
     longitude: "5"

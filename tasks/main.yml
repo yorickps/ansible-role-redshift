@@ -7,9 +7,16 @@
   become_method: sudo
   with_items: "{{ redshift.base }}"
 
+- name: make sure config dir is present
+  file:
+    path: "{{ redshift.conf_path }}"
+    state: directory
+    mode: u=rwx    
+
 - name: install redshift template
   template:
-    src: "redshift.conf.j2"
-    dest: "{{ redshift.conf_path }}"
+    src: "{{ item }}.j2"
+    dest: "{{ redshift.conf_path }}/{{ item }}"
     owner: "{{ ansible_user }}"
     mode: 0640
+  with_items: redshift.conf
