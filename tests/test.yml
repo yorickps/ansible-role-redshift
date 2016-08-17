@@ -3,5 +3,5 @@
   remote_user: root
 
   roles:
-    - ansible-role-redshift
+    - ansible-redshift
 
