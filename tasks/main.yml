@@ -1,12 +1,12 @@
 ---
-- name: install redshift and dependencies
+- name: install redshift
   package:
     name: "{{ item }}"
     state: present
   become: yes
   become_method: su
   become_user: root
-  with_items: "{{ redshift.dependencies }}"
+  with_items: "{{ redshift.base }}"
 
 - name: install redshift template
   template:
