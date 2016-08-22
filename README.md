@@ -1,7 +1,9 @@
 gvillalta99.redshift
 ===============
 
-Install redshift.
+[![Build Status](https://travis-ci.org/ymajik/ansible-redshift.svg?branch=master)](https://travis-ci.org/ymajik/ansible-redshift)
+
+Install [redshift](http://jonls.dk/redshift/).
 
 
 Installation
@@ -12,10 +14,7 @@ Installation
 Dependencies
 ------------
 
-On Fedora:
-
-  - redshift
-
+None
 
 Example Playbook
 ----------------
@@ -32,7 +31,8 @@ Example Playbook
 Requirements
 ------------
 
-- Tested on Fedora 19
+- Tested on Fedora 23,24 & Ubuntu 12.04,14.04,16.04
+
 
 License
 -------
