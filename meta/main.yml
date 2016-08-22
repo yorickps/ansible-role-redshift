@@ -7,10 +7,17 @@ galaxy_info:
   platforms:
   - name: Fedora
     versions:
-      - 19
+      - 23
+      - 24
   - name: Ubuntu
     versions:
+      - precise
       - trusty
-  categories:
+      - xenial
+  - name: Debian
+    versions:
+      - jessie
+  tags:
+    - redshift
     - development
 dependencies: []
