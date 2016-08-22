@@ -1,9 +1,8 @@
 FROM fedora:23
 
 # Install Ansible
-#RUN yum -y install epel-release
-RUN yum -y install git ansible sudo
-RUN yum clean all
+RUN dnf -y install git ansible sudo python2-dnf
+RUN dnf clean all
 
 # Disable requiretty
 RUN sed -i -e 's/^\(Defaults\s*requiretty\)/#--- \1/'  /etc/sudoers
