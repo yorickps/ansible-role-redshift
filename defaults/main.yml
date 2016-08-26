@@ -2,8 +2,6 @@
 redshift:
   base:
     - redshift
-  gui:
-    - redshift-gtk
   gui_enabled: true
   conf_path: "{{ ansible_user_dir }}/.config"
   location:

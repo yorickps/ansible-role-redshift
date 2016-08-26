@@ -1,0 +1,4 @@
+---
+redshift:
+  gui:
+    - redshift-gtk

@@ -1,4 +1,8 @@
 ---
+# Setup/install tasks.
+- include: setup-RedHat.yml
+  when: ansible_os_family == 'RedHat'
+
 - name: install redshift
   package:
     name: "{{ item }}"
@@ -16,7 +20,7 @@
   become_method: sudo
   with_items:
     - "{{ redshift.gui }}"
-  when: redshift.gui_enabled 
+  when: redshift.gui_enabled
 
 - name: make sure config dir is present
   file:
