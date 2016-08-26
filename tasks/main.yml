@@ -8,6 +8,16 @@
   with_items:
     - "{{ redshift.base }}"
 
+- name: install redshift-gtk
+  package:
+    name: "{{ item }}"
+    state: present
+  become: yes
+  become_method: sudo
+  with_items:
+    - "{{ redshift.gui }}"
+  when: redshift.gui_enabled
+
 - name: make sure config dir is present
   file:
     path: "{{ redshift.conf_path }}"

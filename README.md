@@ -26,12 +26,13 @@ Example Playbook
             location:
               latitude: "40"
               longitude: "5"
+            gui_enabled: false
 
 
 Requirements
 ------------
 
-- Tested on Fedora 23,24 & Ubuntu 12.04,14.04,16.04
+- Tested on Fedora 23,24 & Ubuntu 14.04,16.04, Debian 8.5
 
 
 License
