@@ -26,6 +26,7 @@ Example Playbook
             location:
               latitude: "40"
               longitude: "5"
+            gui_enabled: false
 
 
 Requirements
