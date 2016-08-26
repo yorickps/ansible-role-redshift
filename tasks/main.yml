@@ -1,8 +1,4 @@
 ---
-# Setup/install tasks.
-- include: setup-RedHat.yml
-  when: ansible_os_family == 'RedHat'
-
 - name: install redshift
   package:
     name: "{{ item }}"
