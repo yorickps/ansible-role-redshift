@@ -9,4 +9,6 @@ RUN pip install --upgrade pyyaml jinja2 pycrypto
 RUN pip install ansible
 
 # Install Ansible inventory file
+RUN mkdir -pv /etc/ansible
+RUN touch /etc/ansible/hosts
 RUN echo "[local]\nlocalhost ansible_connection=local" > /etc/ansible/hosts
