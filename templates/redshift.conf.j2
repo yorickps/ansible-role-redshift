@@ -25,7 +25,7 @@ transition=1
 ;brightness-night=0.4
 ; Set the screen gamma (for all colors, or each color channel
 ; individually)
-{% if redshift.temp is defined %}
+{% if redshift.gamma is defined %}
 gamma={{ redshift.gamma }}
 {% else %}
 gamma=0.8
@@ -39,7 +39,7 @@ gamma=0.8
 ; Set the location-provider: 'geoclue', 'geoclue2', 'manual'
 ; type 'redshift -l list' to see possible values.
 ; The location provider settings are in a different section.
-{% if redshift.location_providertemp is defined %}
+{% if redshift.location_provider is defined %}
 location-provider={{ redshift.location_provider }}
 {% else %}
 location-provider=manual
