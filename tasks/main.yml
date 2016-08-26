@@ -16,7 +16,7 @@
   become_method: sudo
   with_items:
     - "{{ redshift.gui }}"
-  when: gui_enabled | bool
+  when: redshift.gui_enabled 
 
 - name: make sure config dir is present
   file:
