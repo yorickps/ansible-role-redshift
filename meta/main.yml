@@ -11,7 +11,6 @@ galaxy_info:
       - 24
   - name: Ubuntu
     versions:
-      - precise
       - trusty
       - xenial
   - name: Debian
