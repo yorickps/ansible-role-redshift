@@ -1,7 +1,7 @@
 gvillalta99.redshift
 ===============
 
-[![Build Status](https://travis-ci.org/ymajik/ansible-redshift.svg?branch=master)](https://travis-ci.org/ymajik/ansible-redshift)
+[![Build Status](https://travis-ci.org/ymajik/ansible-role-redshift.svg?branch=master)](https://travis-ci.org/ymajik/ansible-role-redshift)
 
 Install [redshift](http://jonls.dk/redshift/).
 
