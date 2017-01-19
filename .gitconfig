@@ -1,0 +1,26 @@
+[color]
+    status = auto
+    diff = auto
+    ui = auto
+    branch = auto
+    interactive = auto
+[core]
+    excludesfile = /home/ymajik/.gitignore
+    editor = vim
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[push]
+    default = matching
+[user]
+    name = ymajik
+    email = ymajik@gmail.com
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    ci = commit
+    clo = clone
+    co = checkout
+    log = log -M --decorate --graph --oneline
+    sth = stash
+    st = status
+    br = branch
+    rc = rebase --continue
+    pur = pull --rebase
