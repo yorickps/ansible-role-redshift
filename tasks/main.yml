@@ -1,22 +1,22 @@
 ---
-- name: install redshift
-  package:
-    name: "{{ item }}"
-    state: present
-  become: yes
-  become_method: sudo
-  with_items:
-    - "{{ redshift.base }}"
+- block:
+  - name: install redshift
+    package:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - "{{ redshift.base }}"
 
-- name: install redshift-gtk
-  package:
-    name: "{{ item }}"
-    state: present
+  - name: install redshift-gtk
+    package:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - "{{ redshift.gui }}"
+    when: redshift.gui_enabled
+
   become: yes
   become_method: sudo
-  with_items:
-    - "{{ redshift.gui }}"
-  when: redshift.gui_enabled
 
 - name: make sure config dir is present
   file:
