@@ -1,9 +1,10 @@
 ---
 galaxy_info:
-  author: gvillalta99
+  author: yorickps
   description: redshift installation role
   license: BSD
   min_ansible_version: 2.0
+  role_name: yorickps.redshift
   platforms:
   - name: Fedora
     versions:
