@@ -1,4 +1,4 @@
-FROM fedora:24
+FROM fedora:29
 
 # Install Ansible
 RUN dnf -y install git ansible sudo python2-dnf
