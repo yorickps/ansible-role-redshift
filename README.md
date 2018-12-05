@@ -1,8 +1,8 @@
-gvillalta99.redshift
+yorickps.redshift
 ===============
 
 [![Build Status](https://travis-ci.org/ymajik/ansible-role-redshift.svg?branch=master)](https://travis-ci.org/ymajik/ansible-role-redshift)
-[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-redshift-blue.svg?style=flat)](https://galaxy.ansible.com/gvillalta99/redshift/)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-redshift-blue.svg?style=flat)](https://galaxy.ansible.com/yorickps/redshift/)
 
 Install [redshift](http://jonls.dk/redshift/).
 
@@ -10,7 +10,7 @@ Install [redshift](http://jonls.dk/redshift/).
 Installation
 ------------
 
-`$ ansible-galaxy install gvillalta99.redshift`
+`$ ansible-galaxy install yorickps.redshift`
 
 Dependencies
 ------------
